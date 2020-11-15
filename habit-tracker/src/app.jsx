@@ -31,6 +31,10 @@ class App extends Component {
     const habits = this.state.habits.filter(item => item.id !== habit.id); // habits를 반복하며 매게변수로 받은 habit 이 아닌것만 골라서 habits에 넣음
     this.setState({habits}); // 그리고 habits를 재설정
   };
+  handleAdd = name => {
+    const habits = [...this.state.habits, {id: Date.now(), name, count: 0}];
+    this.setState({habits});
+  };
 
   render() {
     return (
@@ -43,6 +47,7 @@ class App extends Component {
               onIncrement={this.handleIncrement}
               onDecrement={this.handleDecrement}
               onDelete={this.handleDelete}
+              onAdd={this.handleAdd}
           />
         </>
     );
