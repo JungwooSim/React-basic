@@ -16,7 +16,7 @@ class Habits extends Component {
 
     handleAdd = name => {
         this.props.onAdd(name);
-    }
+    };
     render() {
         return (
             <>
@@ -29,6 +29,7 @@ class Habits extends Component {
                                    onIncrement={this.handleIncrement}
                                    onDecrement={this.handleDecrement}
                                    onDelete={this.handleDelete}
+                                   onReset={this.handleReset}
                             />
                         ))
                     }
