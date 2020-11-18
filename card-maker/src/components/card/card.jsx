@@ -16,7 +16,6 @@ const Card = ({ card }) => {
                 <p className={styles.message}>{message}</p>
             </div>
         </li>
-
     );
 };
 
